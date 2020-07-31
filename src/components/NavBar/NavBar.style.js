@@ -62,18 +62,20 @@ export const NavBarStyle = styled.div`
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top: 60px;
+      top: -500px;
       width: 100%;
       background: #000c2cf7;
       border-radius: 5px;
       z-index: 2000000;
-      left: 1000px;
-      transition: left 300ms ease-in;
+      left: 0;
+      /* display: none; */
+      transition: top 300ms ease-in;
       padding: 2rem 0;
     }
 
     &.show {
       left: 0;
+      top: 60px;
     }
 
     .nav_item {

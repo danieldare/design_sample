@@ -11,7 +11,7 @@ export const FooterStyle = styled.div`
 
   @media (max-width: 768px) and (max-width: 1024px) {
     //CSS
-    /* height: 40vh; */
+    height: 50vh;
   }
 
   .footer-container {
@@ -26,8 +26,8 @@ export const FooterStyle = styled.div`
       line-height: 2.1rem;
       display: flex;
       justify-content: center;
-      flex-direction: column;
-      margin: 0 auto;
+      flex-direction: column-reverse;
+      margin: 2rem auto;
     }
 
     .brand-section {
@@ -89,10 +89,13 @@ export const FooterStyle = styled.div`
   }
 
   .bottom {
-    position: absolute;
-    bottom: 0;
     display: flex;
     width: 90%;
+
+    @media (max-width: 767px) {
+      //CSS
+      align-items: center;
+    }
   }
 
   .footer_links_holder {

@@ -7,9 +7,11 @@ import { MentorsStyle, MentorsContainer, TextHeading } from './Mentors.style';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Virtual } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 // Import Swiper styles
-SwiperCore.use([Virtual, Navigation, Pagination, Scrollbar, A11y]);
 
 const cardData = [
   {
@@ -35,6 +37,8 @@ const cardData = [
 export default function Mentors() {
   const [currentMentor, setCurrentMentor] = useState(cardData[1]);
   const [mentors, setMentors] = useState(cardData);
+
+  SwiperCore.use([Virtual, Navigation, Pagination, Scrollbar, A11y]);
 
   function nextMentor(index) {
     console.log(index);
@@ -62,32 +66,35 @@ export default function Mentors() {
 
   console.log(currentMentor);
 
-  const slides = Array.from({ length: 1000 }).map((el, index) => `Slide ${index + 1}`);
-
   return (
     <MentorsContainer>
       <TextHeading>Our Mentors</TextHeading>
       <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
-        spaceBetween={50}
-        slidesPerView={3}
         virtual
       >
         <MentorsStyle id="team">
-          {slides.map((slideContent) => {
-            return <SwiperSlide key={slideContent}>{slideContent}</SwiperSlide>;
-          })}
-          {/* {mentors.map((card, index) => (
+          {mentors.map((card, index) => (
             <SwiperSlide key={index}>
               <MentorCard prev={() => prevMentor(index)} index={index} currentMentor={currentMentor} next={() => nextMentor(index)} imgSrc={card.imgSrc} cardText={card.cardText} name={card.name} />
             </SwiperSlide>
-          ))} */}
+          ))}
         </MentorsStyle>
       </Swiper>
+
+      {/* <MentorsStyle id="team">
+        {mentors.map((card, index) => (
+          <SwiperSlide key={index}>
+            <MentorCard prev={() => prevMentor(index)} index={index} currentMentor={currentMentor} next={() => nextMentor(index)} imgSrc={card.imgSrc} cardText={card.cardText} name={card.name} />
+          </SwiperSlide>
+        ))}
+      </MentorsStyle> */}
     </MentorsContainer>
   );
 }
