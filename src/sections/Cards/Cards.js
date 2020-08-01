@@ -33,7 +33,7 @@ export default function Cards() {
   return (
     <CardsStyle>
       {cardData.map(({ imgSrc, cardText, title, data_aos, data_aos_duration }) => (
-        <Card imgSrc={imgSrc} title={title} text={cardText} animationType={data_aos} animationDuration={data_aos_duration} />
+        <Card key={title} imgSrc={imgSrc} title={title} text={cardText} animationType={data_aos} animationDuration={data_aos_duration} />
       ))}
     </CardsStyle>
   );

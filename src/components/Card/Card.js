@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CardStyle, CardTextContent, CardImgContainer, TextTitle, TextBrief } from './Card.style';
-import Spinner from 'components/Spinner/Spinner';
 
 export default function Card({ imgSrc, text, title, animationType, animationDuration }) {
   return (

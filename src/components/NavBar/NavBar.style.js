@@ -8,7 +8,7 @@ export const NavBarStyle = styled.div`
   align-items: center;
   width: 100%;
   height: 7rem;
-  /* position: fixed; */
+  position: relative;
 
   @media (max-width: 767px) {
     display: flex;
@@ -23,7 +23,6 @@ export const NavBarStyle = styled.div`
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: block;
-    border: 1px solid red;
   }
 
   .logo-sticky {
@@ -110,10 +109,8 @@ export const NavBarStyle = styled.div`
     justify-content: center;
     align-items: center;
     width: 40px;
-    /* height: 40px; */
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-    /* border: 3px solid #fff; */
     display: none;
 
     @media (max-width: 767px) {
@@ -121,6 +118,7 @@ export const NavBarStyle = styled.div`
       display: flex;
     }
   }
+
   .menu-btn__burger {
     width: 30px;
     height: 3px;

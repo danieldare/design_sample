@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { NavBarStyle, Container } from './NavBar.style';
 import Logo from 'components/Logo/Logo';
@@ -7,27 +7,10 @@ import useSticky from 'hooks/useSticky';
 export default function NavBar() {
   const { isSticky } = useSticky();
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [, setClickOutSide] = useState(false);
 
   function scrollToTop() {
     scroll.scrollToTop();
   }
-
-  const myRef = useRef();
-  const handleClickOutside = (e) => {
-    if (!myRef.current.contains(e.target)) {
-      setClickOutSide(true);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('click', handleClickOutside);
-    };
-  });
 
   const config = {
     smooth: true,
@@ -64,8 +47,6 @@ export default function NavBar() {
     },
   ];
 
-  console.log(isSticky);
-
   return (
     <Container>
       <NavBarStyle className={`${isSticky && 'navbar-sticky'}`}>
@@ -73,7 +54,7 @@ export default function NavBar() {
           <Logo />
           <div className="brand-text">Gidara</div>
         </div>
-        <ul ref={myRef} className={`nav_items ${isMenuOpen && ' show'}`}>
+        <ul className={`nav_items ${isMenuOpen && ' show'}`}>
           {links.map((link) => {
             return (
               <li className="nav_item" key={link.name}>
@@ -85,7 +66,7 @@ export default function NavBar() {
           })}
         </ul>
         <div className={`menu-btn ${isMenuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!isMenuOpen)}>
-          <div class="menu-btn__burger"></div>
+          <div className="menu-btn__burger"></div>
         </div>
       </NavBarStyle>
     </Container>

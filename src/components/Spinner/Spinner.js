@@ -1,7 +1,7 @@
 import React from 'react';
 import { SpinnerStyle } from './Spinner.style';
 
-const Spinner = ({ color = '#000c2c', borderWidth = '5px', size = '40px' }) => {
+const Spinner = ({ color = '#000c2c', borderWidth = '5px', size = '40px', height = '100vh' }) => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ const Spinner = ({ color = '#000c2c', borderWidth = '5px', size = '40px' }) => {
         justifyContent: 'center',
         background: 'transparent',
         width: '100%',
-        height: '100vh',
+        height: height,
         marginTop: '20px',
       }}
     >

@@ -6,7 +6,7 @@ function useSticky() {
   const handleScroll = () => {
     const offset = window.scrollY;
 
-    if (offset > 150) {
+    if (offset > 200) {
       setSticky(true);
     } else {
       setSticky(false);

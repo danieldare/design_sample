@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LandingScreenPageStyle, Grid2, PrimaryText, BoldText, SecondaryText } from './LandingScreenSection.style';
 import BannerImg from 'assets/Hero_image.png';
 import { Container } from 'components/NavBar/NavBar.style';
 import ArrowIcon from 'components/ArrowIcon/ArrowIcon';
 import Typed from 'react-typed';
+import Spinner from 'components/Spinner/Spinner';
 
 export default function LandingScreenSection() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <LandingScreenPageStyle>
       <Container>
@@ -22,7 +25,8 @@ export default function LandingScreenSection() {
             <ArrowIcon />
           </div>
           <div className="banner-img-container" data-aos="fade-in" data-aos-duration="200">
-            <img src={BannerImg} alt="banner" />
+            {loaded ? null : <Spinner height="70vh" color="limegreen" size="40px" borderWidth="3px" />}
+            <img loading="lazy" style={loaded ? {} : { display: 'none' }} onLoad={() => setLoaded(true)} src={BannerImg} alt="banner" />
           </div>
         </Grid2>
       </Container>

@@ -18,7 +18,7 @@ export const CardImgContainer = styled.div`
   }
 `;
 
-export const CardTextContent = styled.p`
+export const CardTextContent = styled.div`
   padding: 0 25px;
   background: #fff;
   margin: 0;

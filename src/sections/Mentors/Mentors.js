@@ -73,7 +73,7 @@ export default function Mentors() {
       <TextHeading>Our Mentors</TextHeading>
       <MentorsStyle id="team">
         {mentors.map(({ cardText, imgSrc, name }, index) => (
-          <MentorCard isCurrent={index === 1} key={index} className={index === +currentIndex && 'current_mentor'} prev={prevMentor} next={nextMentor} imgSrc={imgSrc} cardText={cardText} name={name} />
+          <MentorCard isCurrent={index === 1} key={index} className={index === 1 && 'current_mentor'} prev={prevMentor} next={nextMentor} imgSrc={imgSrc} cardText={cardText} name={name} />
         ))}
       </MentorsStyle>
     </MentorsContainer>
