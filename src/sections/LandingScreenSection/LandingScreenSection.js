@@ -5,6 +5,7 @@ import { Container } from 'components/NavBar/NavBar.style';
 import ArrowIcon from 'components/ArrowIcon/ArrowIcon';
 import Typed from 'react-typed';
 import Spinner from 'components/Spinner/Spinner';
+import { Link } from 'react-scroll';
 
 export default function LandingScreenSection() {
   const [loaded, setLoaded] = useState(false);
@@ -22,7 +23,9 @@ export default function LandingScreenSection() {
               We invest between N2m - N5m in marketing, production and promotional fees in youbg budding Nigerian artists and help them suceed with design support and our network of successful Indie
               musicians
             </SecondaryText>
-            <ArrowIcon />
+            <Link to="companies" smooth={true} duration={500}>
+              <ArrowIcon />
+            </Link>
           </div>
           <div className="banner-img-container" data-aos="fade-in" data-aos-duration="200">
             {loaded ? null : <Spinner height="70vh" color="limegreen" size="40px" borderWidth="3px" />}

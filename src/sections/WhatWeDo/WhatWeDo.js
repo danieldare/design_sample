@@ -6,7 +6,7 @@ import Cards from 'sections/Cards/Cards';
 
 export default function WhatWeDo() {
   return (
-    <WhatWeDoContainerStyle>
+    <WhatWeDoContainerStyle id="companies">
       <WhatWeDoStyle>
         <RotatedTextContainer>
           <RotatedText>What we do</RotatedText>
