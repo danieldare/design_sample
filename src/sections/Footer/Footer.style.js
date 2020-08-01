@@ -19,6 +19,10 @@ export const FooterStyle = styled.div`
     grid-template-columns: 1.5fr 1fr;
     justify-content: space-between;
 
+    &.top {
+      margin-bottom: 7rem;
+    }
+
     @media (max-width: 767px) {
       //CSS
 

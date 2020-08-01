@@ -106,6 +106,12 @@ export const SecondaryText = styled.p`
   font-weight: 400;
   line-height: 3.2rem;
 
+  &.not-bold {
+    font-weight: 300;
+  }
+
+  margin-bottom: 5rem;
+
   @media (max-width: 767px) {
     //CSS
     margin-bottom: 4rem;

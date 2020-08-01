@@ -42,7 +42,7 @@ export default function Footer() {
             <p>© 2018. All rights reserved</p>
           </div>
           <div className="social-icons">
-            <p>© 2018. All rights reserved</p>
+            <p>&nbsp;</p>
           </div>
         </div>
       </FooterContainer>

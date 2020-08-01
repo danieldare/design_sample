@@ -18,7 +18,7 @@ export default function LandingScreenSection() {
             <BoldText>
               <Typed strings={['We back Nigerian indie artists from around the world and help them do their best work.']} typeSpeed={90} />
             </BoldText>
-            <SecondaryText>
+            <SecondaryText className="not-bold">
               We invest between N2m - N5m in marketing, production and promotional fees in youbg budding Nigerian artists and help them suceed with design support and our network of successful Indie
               musicians
             </SecondaryText>

@@ -5,8 +5,6 @@ import ImageThree from 'assets/mentors_section_image_3_chance_the_rapper.png';
 import MentorCard from 'components/MentorCard/MentorCard';
 import { MentorsStyle, MentorsContainer, TextHeading } from './Mentors.style';
 
-// Import Swiper styles
-
 const cardData = [
   {
     name: 'Killer One',
@@ -67,6 +65,11 @@ export default function Mentors() {
     setMentors([temp[0], ...updatedMentors]);
     setCurrentIndex(index);
   }
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: '-100%' },
+  };
 
   return (
     <MentorsContainer>
