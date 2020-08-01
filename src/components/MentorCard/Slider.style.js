@@ -35,6 +35,12 @@ export const MentorCardImgContainer = styled.div`
     height: 100%;
   }
 
+  @media (max-width: 767px) {
+    //CSS
+    width: 300px;
+    height: 100%;
+  }
+
   img {
     width: 100%;
     height: auto;

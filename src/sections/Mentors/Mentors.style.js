@@ -11,7 +11,6 @@ export const MentorsStyle = styled.div`
 
   @media (max-width: 768px) and (max-width: 1024px) {
     //CSS
-    display: block;
     height: 100%;
     width: 80%;
     margin: 0 auto;
