@@ -1,8 +1,8 @@
 import React from 'react';
 import { WhatWeDoStyle, RotatedText, Hr, MainContent, RotatedTextContainer, WhatWeDoContainerStyle } from './WhatWeDo.style';
-import { PrimaryText, PrimaryBriefText } from 'common/LandingScreenSection/LandingScreenSection.style';
+import { PrimaryText, PrimaryBriefText } from 'sections/LandingScreenSection/LandingScreenSection.style';
 import ArrowIcon from 'components/ArrowIcon/ArrowIcon';
-import Cards from 'common/Cards/Cards';
+import Cards from 'sections/Cards/Cards';
 import { Container } from 'components/NavBar/NavBar.style';
 
 export default function WhatWeDo() {

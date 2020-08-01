@@ -5,7 +5,7 @@ import Logo from 'components/Logo/Logo';
 import useSticky from 'hooks/useSticky';
 
 export default function NavBar() {
-  const { isSticky } = useSticky(false);
+  const { isSticky } = useSticky();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [, setClickOutSide] = useState(false);
 
@@ -27,7 +27,7 @@ export default function NavBar() {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [isMenuOpen]);
+  });
 
   const config = {
     smooth: true,
@@ -64,10 +64,12 @@ export default function NavBar() {
     },
   ];
 
+  console.log(isSticky);
+
   return (
     <Container>
-      <NavBarStyle className={`${isSticky ? 'navbar-sticky' : ''}`}>
-        <div onClick={scrollToTop} className={`brand ${isSticky ? ' logo-sticky' : ''}`}>
+      <NavBarStyle className={`${isSticky && 'navbar-sticky'}`}>
+        <div onClick={scrollToTop} className={`brand ${isSticky && ' logo-sticky'}`}>
           <Logo />
           <div className="brand-text">Gidara</div>
         </div>

@@ -8,7 +8,7 @@ export const NavBarStyle = styled.div`
   align-items: center;
   width: 100%;
   height: 7rem;
-  position: relative;
+  /* position: fixed; */
 
   @media (max-width: 767px) {
     display: flex;
@@ -23,6 +23,7 @@ export const NavBarStyle = styled.div`
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: block;
+    border: 1px solid red;
   }
 
   .logo-sticky {

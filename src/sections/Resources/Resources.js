@@ -1,7 +1,7 @@
 import React from 'react';
-import { RotatedTextContainer, RotatedText, WhatWeDoStyle, WhatWeDoContainerStyle, MainContent, Hr, Button } from 'common/WhatWeDo/WhatWeDo.style';
-import { PrimaryText, PrimaryBriefText } from 'common/LandingScreenSection/LandingScreenSection.style';
-import Cards from 'common/Cards/Cards';
+import { RotatedTextContainer, RotatedText, WhatWeDoStyle, WhatWeDoContainerStyle, MainContent, Hr, Button } from 'sections/WhatWeDo/WhatWeDo.style';
+import { PrimaryText, PrimaryBriefText } from 'sections/LandingScreenSection/LandingScreenSection.style';
+import Cards from 'sections/Cards/Cards';
 import { ReactComponent as Arrow } from 'assets/right-arrow.svg';
 
 export default function Resources() {

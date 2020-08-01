@@ -7,6 +7,7 @@ export const MentorsStyle = styled.div`
   justify-content: center;
   height: 100vh;
   align-items: center;
+  position: relative;
 
   @media (max-width: 768px) and (max-width: 1024px) {
     //CSS

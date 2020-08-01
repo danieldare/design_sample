@@ -1,6 +1,6 @@
 import React from 'react';
 import { SubscribeSectionStyle, InputHolder, HeadingText, SubscribeSectionContainer } from './SubscribeSection.style';
-import { PrimaryText } from 'common/LandingScreenSection/LandingScreenSection.style';
+import { PrimaryText } from 'sections/LandingScreenSection/LandingScreenSection.style';
 
 export default function SubscribeSection() {
   return (

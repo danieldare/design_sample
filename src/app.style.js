@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const AppStyle = styled.div``;
+export const AppStyle = styled.div`
+  overflow-x: hidden;
+`;
 
 export const BannerContainerStyle = styled.div`
   height: 100vh;

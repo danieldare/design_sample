@@ -2,11 +2,21 @@ import styled from 'styled-components';
 
 export const MentorCardStyle = styled.div`
   color: #fff;
+  transition: transform 300ms ease-in;
+  position: relative;
 
   @media (max-width: 768px) and (max-width: 1024px) {
     //CSS
     margin: 3rem 0;
   }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
 `;
 
 export const MentorCardTextContent = styled.div`
@@ -29,9 +39,6 @@ export const MentorCardImgContainer = styled.div`
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-
-  &.current_mentor {
   }
 `;
 
